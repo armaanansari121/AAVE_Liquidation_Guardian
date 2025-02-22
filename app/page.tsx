@@ -772,7 +772,7 @@ export default function Home() {
                     {account.substring(account.length - 4)}
                   </p>
                   {healthFactor !== "0" && (
-                    <p className="text-sm mt-2">
+                    <p className="text-sm mt-2 text-gray-700">
                       Current Health Factor:
                       <span
                         className={`font-bold ml-1 ${
@@ -824,7 +824,7 @@ export default function Home() {
                         value={formData.lendingPoolAddress}
                         onChange={handleInputChange}
                         placeholder="0x..."
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        className="text-gray-500 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                       />
                     </div>
 
@@ -838,7 +838,7 @@ export default function Home() {
                         value={formData.collateralTokenAddress}
                         onChange={handleInputChange}
                         placeholder="0x..."
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        className="text-gray-500 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                       />
                     </div>
 
@@ -852,7 +852,7 @@ export default function Home() {
                         value={formData.collateralPriceFeedAddress}
                         onChange={handleInputChange}
                         placeholder="0x..."
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        className="text-gray-500 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                       />
                     </div>
 
@@ -866,7 +866,7 @@ export default function Home() {
                         value={formData.uniswapPairAddress}
                         onChange={handleInputChange}
                         placeholder="0x..."
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        className="text-gray-500 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                       />
                     </div>
 
@@ -881,7 +881,7 @@ export default function Home() {
                           value={formData.healthFactorThreshold}
                           onChange={handleInputChange}
                           placeholder="120000000000000000"
-                          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                          className="text-gray-500 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                         />
                         <p className="mt-1 text-xs text-gray-500">
                           Default: 1.2 (with 1e18 precision)
@@ -898,7 +898,7 @@ export default function Home() {
                           value={formData.targetHealthFactor}
                           onChange={handleInputChange}
                           placeholder="150000000000000000"
-                          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                          className="text-gray-500 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                         />
                         <p className="mt-1 text-xs text-gray-500">
                           Default: 1.5 (with 1e18 precision)
@@ -1012,7 +1012,7 @@ export default function Home() {
                           name="approvalAmount"
                           value={formData.approvalAmount}
                           onChange={handleInputChange}
-                          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                          className="text-gray-500 mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                         />
                         <p className="mt-1 text-xs text-gray-500">
                           Default: 1 token with 18 decimals
@@ -1027,7 +1027,7 @@ export default function Home() {
                             !deployedCallbackAddress ||
                             !formData.collateralTokenAddress
                           }
-                          className="flex-1 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:bg-blue-300"
+                          className="text-gray-500 flex-1 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:bg-blue-300"
                         >
                           {loading ? "Approving..." : "Approve Token"}
                         </button>
