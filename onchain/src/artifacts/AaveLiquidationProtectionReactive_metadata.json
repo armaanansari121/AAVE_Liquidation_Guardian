@@ -1,0 +1,324 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_lendingPool",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_protectionManager",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_uniswapPair",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_healthFactorThreshold",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_targetHealthFactor",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "chain_id",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_contract",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint64",
+						"name": "gas_limit",
+						"type": "uint64"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "payload",
+						"type": "bytes"
+					}
+				],
+				"name": "Callback",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "CallbackSent",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "Done",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "currentHealthFactor",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "threshold",
+						"type": "uint256"
+					}
+				],
+				"name": "HealthFactorChecked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "service_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_contract",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "topic_0",
+						"type": "uint256"
+					}
+				],
+				"name": "Subscribed",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "coverDebt",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "pay",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "chain_id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "_contract",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "topic_0",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "topic_1",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "topic_2",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "topic_3",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "data",
+								"type": "bytes"
+							},
+							{
+								"internalType": "uint256",
+								"name": "block_number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "op_code",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "block_hash",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tx_hash",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "log_index",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct IReactive.LogRecord",
+						"name": "log",
+						"type": "tuple"
+					}
+				],
+				"name": "react",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/AaveLiquidationProtectionReactive.sol": "AaveLiquidationProtectionReactive"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"lib/reactive-lib/src/abstract-base/AbstractPayer.sol": {
+			"keccak256": "0x0883ce19aadda71d81214e409a53bd012cc1e9d49774eda938eddcf42fa467e1",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://cc0ca1844960cb657466a89141983b0c5b960667db9660b1c6e2779289b9c23f",
+				"dweb:/ipfs/Qmch1yTf6SFQszJE6zaUzpY2fTcE3d6pt9TwxV9zQ87KHo"
+			]
+		},
+		"lib/reactive-lib/src/abstract-base/AbstractReactive.sol": {
+			"keccak256": "0x5f68c4eeb23d3d8e807f8477d06d0d45d23d7d17b92f9560144587291bbc72d8",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://875e2d652fefe5e524dd2ab592abfa076001145f444f608fd1fba97c93134d92",
+				"dweb:/ipfs/QmPVt2tv1bPjLNFbUouyHZ9CYVz8M4VBJ3ujNHG4a2KssE"
+			]
+		},
+		"lib/reactive-lib/src/interfaces/IPayable.sol": {
+			"keccak256": "0xf014b7c839939ebe17d9e48ce83b238729136461d0436400275eb3860a5ccc3d",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://49c3c4cfa9dc66f6b4e5a6d34cff090cf1a684b74bc0f7e5913dcccff7545530",
+				"dweb:/ipfs/QmcEY2LTUn5sCsvwkWxVEgs3S3MTaoV3pfzn75qg1QTRKB"
+			]
+		},
+		"lib/reactive-lib/src/interfaces/IPayer.sol": {
+			"keccak256": "0xb9f23276271559bc71e419e519599aa6f23dae2b003e9aaba01401293d244f77",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://0d9c2bf752e29d56d65f89a2b8b95515d511c6572d7bc7f4dd1f9ff76db4cf41",
+				"dweb:/ipfs/QmNnwe2pdrJPEKUSGb68spSeQWGuYGfxXg2s8inhqWFdqk"
+			]
+		},
+		"lib/reactive-lib/src/interfaces/IReactive.sol": {
+			"keccak256": "0x3ea06f969899bec04b507c4f81108ffad352be48cd532b8a3aaf624fb3deaa3d",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://ba95e67d555b7b97551b994bf74716aa9ddd30888715b645fa9bee4e6fee69f7",
+				"dweb:/ipfs/QmXQ7pPJjwntBWrLMsNVtkCfirSNbt96cDkowo76X31zb8"
+			]
+		},
+		"lib/reactive-lib/src/interfaces/ISubscriptionService.sol": {
+			"keccak256": "0x42892e4fa60d44649d859b822edef0ff8885bc834af52e19692a3cdb1ef42cf0",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://24be53c28e3ece63955620c0129cb6e2f552e9816f3f2c9e798e92a2c0d50d82",
+				"dweb:/ipfs/QmaPEWy2ZTbZJtYupXUe54QDTtyLRKATMwTjcxV53AmcDH"
+			]
+		},
+		"lib/reactive-lib/src/interfaces/ISystemContract.sol": {
+			"keccak256": "0x504be06f69db065dd32fd0b5849a84d7e46c84e4f84bf815cd6ee60630aa7d0a",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://c393ec0fc8e35fa34535a8e38bddb8568fa674a906aeace922c18e690f347de9",
+				"dweb:/ipfs/QmYZupTo146oH8SRgrtHDSVdyWqQ8QAZ45Jrms9LrQd82s"
+			]
+		},
+		"src/AaveLiquidationProtectionReactive.sol": {
+			"keccak256": "0x156e936b00eaf7e38ff5836ff52f5b3e0ef9e0c31186b41709aa22a878f6bfe0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://37c07c905899bd251284d53f7587b201f76d72e73d74c1e6abbcd02c263662ec",
+				"dweb:/ipfs/QmeehZDYZZR4kZmwVa9DkGXBPnHJaXRMeeh1qPcvKrFHHK"
+			]
+		}
+	},
+	"version": 1
+}

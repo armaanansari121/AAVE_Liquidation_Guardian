@@ -1,0 +1,166 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getUserAccountData",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "totalCollateralETH",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalDebtETH",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "availableBorrowsETH",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "currentLiquidationThreshold",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ltv",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "healthFactor",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "asset",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "onBehalfOf",
+						"type": "address"
+					},
+					{
+						"internalType": "uint16",
+						"name": "referralCode",
+						"type": "uint16"
+					}
+				],
+				"name": "supply",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/AaveLiquidationProtectionCallback.sol": "ILendingPool"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0x257a8d28fa83d3d942547c8e129ef465e4b5f3f31171e7be4739a4c98da6b4f0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6d39e11b1dc7b9b8ccdabbc9be442ab7cda4a81c748f57e316dcb1bcb4a28bf9",
+				"dweb:/ipfs/QmaG6vz6W6iEUBsbHSBob5mdcitYxWjoygxREHpsJHfWrS"
+			]
+		},
+		"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xc6a8ff0ea489379b61faa647490411b80102578440ab9d84e9a957cc12164e70",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0ea104e577e63faea3b69c415637e99e755dcbf64c5833d7140c35a714d6d90c",
+				"dweb:/ipfs/Qmau6x4Ns9XdyynRCNNp3RhLqijJjFm7z5fyZazfYFGYdq"
+			]
+		},
+		"lib/reactive-lib/src/abstract-base/AbstractCallback.sol": {
+			"keccak256": "0x4978bf4406213a1270d127322f3b165da99bc2b96b511f2276ca0b2c3b0d5a8a",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://a3cf8e877424f141945ba3a116f55048b923e4bdbd0c57d04df6b963df9945c6",
+				"dweb:/ipfs/QmZxKanuvE8Mcy1ktGCixrw2yJb7FrHzrEoyznh1JKfBfN"
+			]
+		},
+		"lib/reactive-lib/src/abstract-base/AbstractPayer.sol": {
+			"keccak256": "0x0883ce19aadda71d81214e409a53bd012cc1e9d49774eda938eddcf42fa467e1",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://cc0ca1844960cb657466a89141983b0c5b960667db9660b1c6e2779289b9c23f",
+				"dweb:/ipfs/Qmch1yTf6SFQszJE6zaUzpY2fTcE3d6pt9TwxV9zQ87KHo"
+			]
+		},
+		"lib/reactive-lib/src/interfaces/IPayable.sol": {
+			"keccak256": "0xf014b7c839939ebe17d9e48ce83b238729136461d0436400275eb3860a5ccc3d",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://49c3c4cfa9dc66f6b4e5a6d34cff090cf1a684b74bc0f7e5913dcccff7545530",
+				"dweb:/ipfs/QmcEY2LTUn5sCsvwkWxVEgs3S3MTaoV3pfzn75qg1QTRKB"
+			]
+		},
+		"lib/reactive-lib/src/interfaces/IPayer.sol": {
+			"keccak256": "0xb9f23276271559bc71e419e519599aa6f23dae2b003e9aaba01401293d244f77",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://0d9c2bf752e29d56d65f89a2b8b95515d511c6572d7bc7f4dd1f9ff76db4cf41",
+				"dweb:/ipfs/QmNnwe2pdrJPEKUSGb68spSeQWGuYGfxXg2s8inhqWFdqk"
+			]
+		},
+		"src/AaveLiquidationProtectionCallback.sol": {
+			"keccak256": "0x09bccb9012b73b821c944a772bcc3cca1431882bcdec4ae350eed46ae216d6a9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://90361d6d1464f993de4bcfab0ec01d1a226cc5450de4da93f82f02cd50689edf",
+				"dweb:/ipfs/QmP6vwkaLoMLMuQUeznR3pVA7tVaQhvHmHnNZt1cfxNTQT"
+			]
+		}
+	},
+	"version": 1
+}
