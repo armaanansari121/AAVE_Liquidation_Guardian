@@ -735,7 +735,7 @@ export default function Home() {
           <div className="max-w-md mx-auto">
             <div>
               <h1 className="text-3xl font-extrabold text-gray-900 text-center">
-                Aave Liquidation Protection
+                Aave Liquidation Guardian
               </h1>
               <p className="mt-2 text-sm text-gray-500 text-center">
                 Deploy smart contracts to protect your Aave position from
