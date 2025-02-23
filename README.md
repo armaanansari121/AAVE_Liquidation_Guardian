@@ -1,6 +1,6 @@
 # Aave Liquidation Protection System
 
-The **Aave Liquidation Protection System** implements a reactive smart contract solution that monitors Uniswap V2 price feeds to protect Aave positions from liquidation. When a user's health factor approaches a critical threshold, the system automatically supplies additional collateral to maintain position safety. This system demonstrates advanced usage of reactive smart contracts for automated DeFi position management.
+The **Aave Liquidation Protection System** implements a reactive smart contract solution that monitors Uniswap V2 price feeds to protect Aave positions from liquidation. When a user's health factor approaches a critical threshold, the system automatically supplies additional collateral to maintain position safety. This system demonstrates advanced usage of reactive smart contracts for automated DeFi position management. [Demo](https://youtu.be/FYRzBvP0G20?si=PuzVVG_xCS6ESULo)
 
 ## Contracts
 
